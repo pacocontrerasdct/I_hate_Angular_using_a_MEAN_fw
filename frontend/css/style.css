@@ -171,3 +171,17 @@ radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
 background-color:#282828;
 background-size:16px 16px;
 }
+.border-show {
+  border: 1px solid yellow;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
+
+
+
+
