@@ -1,7 +1,43 @@
-  <section ng-controller='postsController as posts'>
+<section ng-controller='postsController as posts'>
+  <ul id="posts">
+    <div class="pure-g">
+      <li class="post" ng-repeat="post in posts.all" data-id="{{ post._id }}">
+        <div class="pure-u-2-24 center">
+          <button>+</button>
+        </div>
+        <div class="pure-u-2-24 center">
+          <img src="{{ post.pic }}" class="image-50xauto">
+        </div>
+        <div class="pure-u-17-24 inline">
+          <ul id="posts-data">
+            <li>
+              <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a>
+              <span>{{ post.url }}</span>
+            </li>
+            <li>
+              <em>{{ post.author }}</em> - 
+              <em ng-if="post.points === 1 " ng-init="ptext = 'point'">
+              {{ post.points}} {{ ptext }}
+              </em>
+              <em ng-if="post.points !== 1 " ng-init="ptext = 'points'">
+              {{ post.points}} {{ ptext }}
+              </em> - <em>{{ post.createdAt }}</em>
+            </li>
+          <ul>
+        </div>
+        <div class="pure-u-3-24">
+          <a class='delete' href="{{ post.url }}" target="blank">Link</a>
+          <button class='delete' ng-click="posts.deletePost(post)">X</button>
+        </div>
+      </li>
+    </div>
+  </ul>
+</section>
+
+
+<!--   <section ng-controller='postsController as posts'>
     <ul id="posts">
-      <p>HELLO INDEX</p>
-      <li ng-repeat="post in posts.all" data-id="{{ post._id }}">
+      <li class="post" ng-repeat="post in posts.all" data-id="{{ post._id }}">
         <img src="{{ post.pic }}" class="image-100xauto">
         <strong>{{ post.title }}</strong>
         <a href="" ng-click>{{ post.url }}</a>
@@ -13,12 +49,12 @@
         <em ng-if="post.points !== 1 " ng-init="ptext = 'points'">
         {{ post.points}} {{ ptext }}
         </em> - <em>{{ post.createdAt }}</em>
-
+ -->
         <!-- <span class='status {{ post.status | lowercase  }}'>{{ post.points | uppercase }}</span>
         <span>{{ post.createdAt }}</span> -->
          
-        <a class='delete' href="{{ post.url }}" target="blank">Link</a>
+<!--         <a class='delete' href="{{ post.url }}" target="blank">Link</a>
         <button class='delete' ng-click="posts.deletePost(post)">X</button>
       </li>
     </ul>
-  </section>
+  </section> -->
