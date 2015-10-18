@@ -140,11 +140,8 @@ form#newPost input[type=submit]:focus {
   height: 50px;
 }
 a {
-  margin: 5px 0 0 10px;
-  padding: 10px 10px;
-  border-radius: 5px;
   text-decoration: none;
-  font: 1rem bold 'arial';
+  color: inherit;
 }
 .active {
   color: black;
@@ -166,13 +163,7 @@ a {
   background: white;
 }
 .border-show {
-  border: 1px solid black;
-}
-.show {
-  display: block;
-}
-.hide {
-  display: none;
+  border-bottom: 1px solid #e7eff2;
 }
 .center {
   text-align: center;
@@ -196,25 +187,87 @@ a {
   display: -moz-inline-flex;
   display: inline-flex;
 }
+/* Show submenu hidden in top nav*/
 .show-sub-menu {
   position: absolute;
-  top: 40%;
+  top: 30%;
+}
+.show {
+  display: block;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+.hide {
+  display: none;
+  animation-name: fadeOut;
+  animation-duration: 1s;
 }
 #sub-menu {
   background-color: #e7eff2;
+  border: 1px solid rgba(0,0,0,0.4);
+  border-radius: 4px;
   width: 120px;
   padding: 10px;
-  margin-left: 10px;
-  margin-top: 5px;
   z-index: 1000;
 }
 #sub-menu li {
   padding: 10px 0;
+  text-align: left;
+}
+#sub-menu li a {
+  color: black;
+  text-decoration: none;
 }
 .height60 {
-  height: 60px;
+  height: 30px;
+  width: 100px;
+}
+.bar {
+  border-bottom: 1px solid rgba(0,0,0,0.3);
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+/* Input for search in the view */
+/*******************************/
+.search-input {
+  position: absolute;
+  top: 30%;
+  background-color: rgba(255,255,255,0.1);
+  color: black;
+  border-radius: 25px;
+  border-width: 100%;
+  font-size: inherit;
+  width: 90px;
+  height: 20px;
+  padding-left: 5px
+}
+.search-input:focus {
+  background-color: white;
+  width: 120px;
+}
 
 
 

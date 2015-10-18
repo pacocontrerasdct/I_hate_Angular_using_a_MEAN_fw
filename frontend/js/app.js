@@ -1,5 +1,6 @@
 angular
   .module('IhateAngular', ['ui.router'])
+  .constant('API', 'http://localhost:3000/api')
   .config(MainRouter);
 
 function MainRouter($stateProvider, $urlRouterProvider, $locationProvider) {

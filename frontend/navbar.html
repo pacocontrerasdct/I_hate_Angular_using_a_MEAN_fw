@@ -5,17 +5,17 @@
           ng-init="visibility = false"
           ng-mouseenter="visibility = true"
           ng-mouseleave="visibility = false">Show menu
-
           <nav id="sub-menu" class="border-show" ng-class="visibility? 'show' : 'hide' ">
-          <ul>
-            <li><a ui-sref-active="active" ui-sref="home">Home</a></li>
-            <li><a ui-sref-active="active" ui-sref="author">Authors</a></li>
-            <li><a ui-sref-active="active" ui-sref="new">What's New</a></li>
-            <li><a ui-sref-active="active" ui-sref="best">Best Rated</a></li>
-            <li><a ui-sref-active="active" ui-sref="about">About</a></li>
-          </ul>
+            <ul>
+              <li class="bar"><a ui-sref="home">Home</a></li>
+              <li class="bar"><a ui-sref="author">Authors</a></li>
+              <li class="bar"><a ui-sref="new">What's New</a></li>
+              <li class="bar"><a ui-sref="best">Best Rated</a></li>
+              <li><a ui-sref="about">About</a></li>
+            </ul>
           </nav>
         </div>
+        
       </div>
       <div class="center pure-u-3-5">
         <h1 class="header-logo">
@@ -24,8 +24,8 @@
         </h1>
       </div>
       <div class="pure-u-1-5">
-        <nav class="top-nav show-sub-menu"">
-          <a ui-sref-active="active" ui-sref="add">Post</a>
+        <nav class="top-nav show-sub-menu">
+          <a ui-sref="add">Post</a>
         </nav>
       </div>
   </div>
