@@ -1,0 +1,26 @@
+<div class="pure-u-2-24 center">
+  <button class='delete' ng-click="posts.updatePost(post)">+1</button>
+</div>
+<div class="pure-u-2-24 center">
+  <img src="{{ post.pic }}" class="image-50xauto">
+</div>
+<div class="pure-u-17-24 inline">
+  <ul id="posts-data">
+    <li>
+      <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a>
+      <span>{{ post.url }}</span>
+    </li>
+    <li>
+      <em>{{ post.author }}</em> - 
+      <em ng-if="post.points === 1 " ng-init="ptext = 'point'">
+      {{ post.points}} {{ ptext }}
+      </em>
+      <em ng-if="post.points !== 1 " ng-init="ptext = 'points'">
+      {{ post.points}} {{ ptext }}
+      </em> - <em>{{ post.createdAt | date:'medium' }}</em>
+    </li>
+  <ul>
+</div>
+<div class="pure-u-3-24 center">
+  <button class='delete' ng-click="posts.deletePost(post)">X</button>
+</div>

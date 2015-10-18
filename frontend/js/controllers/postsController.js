@@ -9,9 +9,11 @@ function postsController($http){
   self.addPost = addPost;
   self.newPost = {};
   self.getPosts = getPosts;
+  self.updatePost = updatePost;
   self.deletePost = deletePost;
 
   getPosts();
+
   function getPosts(){
     console.log('gettting posts')
     $http
@@ -30,6 +32,17 @@ function postsController($http){
     self.newPost = {};
   }
 
+  function updatePost(post){
+    self.points = post.points + 1;
+    console.log("self", self.points);
+    $http
+      .patch('http://localhost:3000/posts/' + post._id)
+      .then(function(response){
+        console.log(response)
+        getPosts();
+      });
+  }
+
   function deletePost(post){
     $http
       .delete("http://localhost:3000/posts/" + post._id)
@@ -38,5 +51,5 @@ function postsController($http){
         self.all.splice(index, 1);
       });
   }
-
 }
+

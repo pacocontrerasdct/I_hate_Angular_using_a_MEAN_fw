@@ -11,6 +11,7 @@ function Post($resource, API) {
     {id: '@id'},
     { 
       'get':       { method: 'GET' },
+      'patch':     { method: 'PATCH' },
       'save':      { method: 'POST' },
       'query':     { method: 'GET', isArray: true},
       'remove':    { method: 'DELETE' },

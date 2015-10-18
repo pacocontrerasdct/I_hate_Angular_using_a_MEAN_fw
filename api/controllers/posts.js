@@ -49,15 +49,18 @@ function updatePost(request, response) {
 
   Post.findById({_id: id}, function(error, post) {
     if(error) response.json({message: 'Could not find post b/c:' + error});
-
     if(request.body.title) post.title = request.body.title;
     if(request.body.author) post.start = request.body.author;
     if(request.body.url) post.end = request.body.url;
 
+    post.points = post.points + 1;
+    
+    // if(request.body.points) post.points = request.body.points;   
+
     post.save(function(error) {
       if(error) response.json({messsage: 'Could not update post b/c:' + error});
 
-      response.json({message: 'Post successfully updated', post: post});
+      response.json({message: 'Paco Post successfully updated', post: post});
     });
   }).select('-__v');
 }

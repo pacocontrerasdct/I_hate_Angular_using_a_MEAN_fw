@@ -11,19 +11,19 @@ router.route('/posts')
   //GET all posts
   .get(postsController.getAll)
 
-  //POST a new posts
+  //POST a new post
   .post(postsController.createPost);
 
 
 router.route('/posts/:id')
 
-  // GET return specific posts
+  // GET return specific post
   .get(postsController.getPost)
 
-  // PATCH update existing posts
+  // PATCH update existing post
   .patch(postsController.updatePost)
 
-  // DELETE remove specific posts from DB
+  // DELETE remove specific post from DB
   .delete(postsController.removePost);
 
 

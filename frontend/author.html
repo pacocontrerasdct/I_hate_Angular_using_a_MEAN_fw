@@ -1,1 +1,11 @@
-<h1>Author</h1>
+<section>
+  <ul id="posts">
+    <div class="pure-g">
+      <li class="post"
+      ng-repeat="post in posts.all | filter:query | orderBy:'author'"
+      data-id="{{ post._id }}">
+        <div ng-include="'form.html'">
+      </li>
+    </div>
+  </ul>
+</section>
