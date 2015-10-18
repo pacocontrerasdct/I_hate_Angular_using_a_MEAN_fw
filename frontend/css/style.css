@@ -3,7 +3,6 @@ body {
   background-color: #eee;
   margin: 0 auto;
   color: black;
-  position: absolute;
 }
 header {
   color: white;
@@ -37,12 +36,12 @@ ul#posts-data li {
 }
 
 ul#posts li em {
-/*  margin-left: 0.382rem;
+/*  margin-left: 0.382em;
   opacity: 0.5;*/
 }
 
 ul#posts li button.delete {
-/*  margin-left: 0.618rem;
+/*  margin-left: 0.618em;
   border: 1px solid rgba(0,0,0,0.08);
   border-radius: 100px;
   background: white;
@@ -54,71 +53,44 @@ ul#posts li button.delete:hover {
   color: grey;*/
 }
 
-span.status {
-  font-size: 0.6rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-  background: black;
-  color: white;
-  padding: 0.1em 0.618em 0.1618em;
-  border-radius: 3px;
-  float: left;
-  position: relative;
-  top: 4px;
-  margin-right: 0.618em;
-}
-
-span.status.dead {
-  background: red;
-}
-span.status.alive {
-  background: green;
-}
-
+/* Form for adding a new post */
+/*******************************/
 form#newPost {
-  border: 2px solid black;
+  border: 2px solid rgba(0,0,0,.1);
   border-radius: 4px;
-  padding: 1.8rem 1rem 0.618rem;
-  max-width: 300px;
-  margin-top: 2.4rem;
-  background-color: black;
+  padding: 1.8em 1em;
+  margin-top: 2.4em;
 }
 
 form#newPost div {
-  margin-bottom: 0.618rem;
+  margin-bottom: 0.5em;
 }
-
 form#newPost label {
-  width: 4.8rem;
+  width: 4.8em;
   text-align: right;
   display: inline-block;
-  margin-right: 0.192rem;
-  font-size: 0.8rem;
+  margin-right: 1em;
+  font-size: 1em;
   font-weight: bold;
 }
 
-form#newPost input[type=text] {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  font-size: 0.8rem;
+form#newPost input[type=text], form#newPost textarea[type=text] {
+  font-size: 1em;
   display: inline-block;
-  min-width: 60%;
+  min-width: 85%;
   border: 1px solid rgba(0,0,0,0.14);
-  padding: 0.368em;
+  padding: 0.4em;
 }
 
 form#newPost input[type=submit] {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
   display: block;
-  width: 100%;
+  width: 20%;
   border: 1px solid rgba(0,0,0,0.14);
   background: white;
   border-radius: 4px;
-  margin: 2rem auto 0;
-  padding: 1rem;
+  margin: 2em auto 0;
+  padding: 1em;
   background: rgba(0,0,0,0.04);
-  background: linear-gradient(white, rgba(0,0,0,0.04));
   box-shadow: 0px 3px 4px rgba(0,0,0,0.04);
   cursor: pointer;
   color: rgba(0,0,0,0.7);
@@ -135,7 +107,17 @@ form#newPost input[type=submit]:focus {
   box-shadow: none;
   outline: none;
 }
+.height-150px {
+  height: 150px;
+  vertical-align: text-top;
+}
 
+
+
+
+
+/* Header                        */
+/*********************************/
 .image-50xauto {
   height: 50px;
 }
@@ -152,12 +134,6 @@ a {
   border-radius: 0px;
   margin-bottom: 0px;
   border-bottom: 1px solid #e7eff2;
-/*  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;*/
   position: relative;
   width: 100%;
   background: white;
@@ -187,7 +163,9 @@ a {
   display: -moz-inline-flex;
   display: inline-flex;
 }
+
 /* Show submenu hidden in top nav*/
+/*********************************/
 .show-sub-menu {
   position: absolute;
   top: 30%;
